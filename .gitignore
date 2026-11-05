@@ -1,0 +1,23 @@
+.test-artifacts/
+
+# Sources locales lourdes ou privées : conservées sur le SSD, jamais publiées.
+produit/
+image/
+croquis/
+maquettes/
+catalogue_maillots_prix_codex.docx
+
+# Archives et sources PNG remplacées par les JPEG web optimisés.
+assets/images-produits/catalogue-2026/archive-non-utilises/
+assets/images-produits/catalogue-2026/hero/*.png
+assets/images-produits/catalogue-2026/a-plat/*.png
+
+# Notes de génération internes.
+assets/identite-visuelle/*prompt*.md
+assets/identite-visuelle/prompts-*.md
+
+# Fichiers système et éditeurs.
+.DS_Store
+Thumbs.db
+.vscode/
+

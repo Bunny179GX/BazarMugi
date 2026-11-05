@@ -293,7 +293,7 @@ img {
   isolation: isolate;
   background:
     linear-gradient(90deg, rgba(13, 26, 35, 0.28), rgba(13, 26, 35, 0.04)),
-    url("identite-visuelle/hero-proprietaire-beely-v1.png") center / cover no-repeat,
+    url("assets/identite-visuelle/hero-proprietaire-beely-v1.png") center / cover no-repeat,
     linear-gradient(135deg, #2b6d8c, #d8b56d 60%, #634127);
 }
 

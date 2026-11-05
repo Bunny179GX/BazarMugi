@@ -27,7 +27,7 @@ function status(product) { const qty = available(product); return qty ? { label:
 function setupTheme() {
   document.title = `${theme.label} — Le Bazar des Mugis`; document.body.dataset.theme = categoryId;
   els.hero.style.setProperty("--theme-accent", theme.accent); els.hero.style.setProperty("--theme-tint", theme.tint);
-  els.title.textContent = theme.title; els.eyebrow.textContent = theme.eyebrow; els.description.textContent = theme.description; els.image.src = `identite-visuelle/${theme.image}`; els.breadcrumb.textContent = theme.label; els.catalogueTitle.textContent = theme.label; els.quote.textContent = `« ${theme.quote} »`;
+  els.title.textContent = theme.title; els.eyebrow.textContent = theme.eyebrow; els.description.textContent = theme.description; els.image.src = `assets/identite-visuelle/${theme.image}`; els.breadcrumb.textContent = theme.label; els.catalogueTitle.textContent = theme.label; els.quote.textContent = `« ${theme.quote} »`;
   els.tabs.innerHTML = catalogue.categories.map(cat => `<a class="${cat.id === categoryId ? "active" : ""}" href="${cat.href || "index.html#marches"}"><span aria-hidden="true">${cat.icon}</span>${escapeHtml(cat.label)}</a>`).join("");
   els.promises.innerHTML = theme.promises.map(([icon,title,text]) => `<article><span aria-hidden="true">${icon}</span><h2>${title}</h2><p>${text}</p></article>`).join("");
 }
