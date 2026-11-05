@@ -20,9 +20,9 @@ Ouvrir `index.html` avec Edge, Chrome ou Firefox. Toutes les données de démons
 1. Créer un dépôt GitHub vide.
 2. Ajouter le contenu de ce dossier à la racine du dépôt.
 3. Envoyer la branche `main` sur GitHub.
-4. Dans **Settings > Pages**, choisir **GitHub Actions** comme source.
+4. Dans **Settings > Pages**, publier depuis la branche `main` et le dossier `/ (root)`.
 
-Le workflow inclus dans `.github/workflows/pages.yml` publiera automatiquement le site. La balise `noindex` empêche volontairement les moteurs de recherche d’indexer ce prototype ; il reste accessible à toute personne possédant le lien.
+La balise `noindex` empêche volontairement les moteurs de recherche d’indexer ce prototype ; il reste accessible à toute personne possédant le lien.
 
 ## Limites importantes
 
@@ -35,7 +35,7 @@ Ce dépôt est une démonstration, pas encore une boutique de production :
 - certaines informations produit restent à confirmer ;
 - les conditions de vente, retours, confidentialité et frais définitifs restent à valider avant une ouverture commerciale.
 
-Les photos RAW, documents de travail, références personnelles et anciennes images ont été exclus du dépôt par `.gitignore`. Ils restent conservés localement sur le SSD.
+Les photos RAW, documents de travail, références personnelles et anciennes images restent conservés localement sur le SSD.
 
 ## Structure utile
 
@@ -44,10 +44,9 @@ Les photos RAW, documents de travail, références personnelles et anciennes ima
 - `product.html`, `product.js` : fiches produit ;
 - `admin.html`, `admin.js` : espace vendeur local ;
 - `catalogue-data.js`, `catalogue-reel-2026.js` : catégories et catalogue ;
-- `assets/` : images réellement utilisées par le site ;
-- `docs/` : suivi fonctionnel et documentation du prototype.
-
-Le parcours de test détaillé se trouve dans [docs/TESTER_LE_SITE.md](docs/TESTER_LE_SITE.md).
+- `hero/` : images principales des produits ;
+- `a-plat/` : vues supplémentaires des produits ;
+- `identite-visuelle/` : illustrations de l’accueil et des marchés.
 
 ## Droits
 
