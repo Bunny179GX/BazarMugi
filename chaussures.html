@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="description" content="Chaussures, baskets et crampons de seconde main du Bazar des Mugis." />
+    <title>Marché des chaussures — Le Bazar des Mugis</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="catalogue-data.js" defer></script>
+    <script src="catalogue-reel-2026.js" defer></script>
+    <script src="chaussures.js" defer></script>
+  </head>
+  <body class="shoe-page">
+    <a class="skip-link" href="#catalogueChaussures">Aller aux chaussures</a>
+
+    <div class="prototype-banner" role="status">
+      <span>Page chaussures en construction — articles et photos de démonstration</span>
+      <button class="text-button" id="resetDemo" type="button">Réinitialiser la démo</button>
+    </div>
+
+    <header class="site-header">
+      <div class="header-inner page-shell">
+        <a class="brand" href="index.html" aria-label="Retour à l'accueil du Bazar des Mugis">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span><strong>Le Bazar<br />des Mugis</strong><small>Des trésors pour tous</small></span>
+        </a>
+
+        <button class="mobile-menu-button icon-button" id="mobileMenuButton" type="button" aria-expanded="false" aria-controls="mainNav">
+          <span class="sr-only">Ouvrir le menu</span><span aria-hidden="true">☰</span>
+        </button>
+
+        <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a class="active" href="chaussures.html">Chaussures</a>
+          <a href="index.html#marches">Catégories</a>
+          <a href="index.html#a-propos">À propos</a>
+          <a href="mailto:bazarmugi@gmail.com">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-button" id="focusSearch" type="button" aria-label="Rechercher une chaussure"><span aria-hidden="true">⌕</span></button>
+          <button class="icon-button desktop-action" id="favoritesButton" type="button" aria-label="Afficher mes favoris">
+            <span aria-hidden="true">♡</span><span class="counter" id="favoriteCount" hidden>0</span>
+          </button>
+          <button class="icon-button cart-button" id="cartButton" type="button" aria-label="Ouvrir le panier">
+            <span aria-hidden="true">🛒</span><span class="counter" id="cartCount" hidden>0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="category-hero shoe-hero" aria-labelledby="shoeTitle">
+        <div class="page-shell category-hero-inner">
+          <nav class="breadcrumbs" aria-label="Fil d’Ariane">
+            <a href="index.html">Accueil</a><span aria-hidden="true">›</span><span>Chaussures</span>
+          </nav>
+          <div class="category-hero-copy">
+            <p class="eyebrow">Marché des chaussures</p>
+            <h1 id="shoeTitle">Des paires pour une seconde vie</h1>
+            <p>Baskets, crampons et chaussures variées, avec leur pointure, leur état réel et leurs défauts clairement indiqués.</p>
+          </div>
+          <div class="shoe-hero-art" aria-hidden="true">
+            <span class="field-line field-line-one"></span>
+            <span class="field-line field-line-two"></span>
+            <img src="assets/identite-visuelle/hero-chaussures-proprietaire-beely-v1.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <nav class="market-tabs" aria-label="Les marchés du bazar">
+        <div class="page-shell market-tabs-inner">
+          <a class="active" href="chaussures.html"><span aria-hidden="true">👟</span>Chaussures</a>
+          <a href="index.html#marches"><span aria-hidden="true">⚽</span>Maillots & foot</a>
+          <a href="index.html#marches"><span aria-hidden="true">🎮</span>Gaming</a>
+          <a href="index.html#marches"><span aria-hidden="true">📚</span>Mangas</a>
+          <a href="index.html#marches"><span aria-hidden="true">🪑</span>Meubles</a>
+          <a href="index.html#marches"><span aria-hidden="true">🧭</span>Et plus…</a>
+        </div>
+      </nav>
+
+      <section class="catalogue-section" id="catalogueChaussures">
+        <div class="page-shell">
+          <div class="catalogue-intro">
+            <div>
+              <p class="eyebrow">Structure prête</p>
+              <h2>Les chaussures</h2>
+            </div>
+            <p class="demo-note"><strong>Pour ce premier test :</strong> les fiches marquées « Exemple » servent uniquement à vérifier l'organisation. Elles seront remplacées par tes véritables articles et photos.</p>
+          </div>
+
+          <button class="button filter-toggle" id="filterToggle" type="button" aria-expanded="false" aria-controls="shoeFilters">Afficher les filtres</button>
+
+          <div class="catalogue-layout">
+            <aside class="filters-panel" id="shoeFilters">
+              <div class="filters-title"><span aria-hidden="true">☷</span><h2>Filtres</h2></div>
+              <label class="filter-search">Rechercher<input id="shoeSearch" type="search" placeholder="Nom, marque, modèle…" /></label>
+
+              <fieldset class="filter-group">
+                <legend>Pointure</legend>
+                <div class="size-filter" id="sizeFilters"></div>
+              </fieldset>
+
+              <fieldset class="filter-group">
+                <legend>Type</legend>
+                <label><input type="checkbox" name="type" value="Baskets" /> Baskets</label>
+                <label><input type="checkbox" name="type" value="Crampons" /> Crampons</label>
+                <label><input type="checkbox" name="type" value="Running" /> Running</label>
+                <label><input type="checkbox" name="type" value="Sport en salle" /> Sport en salle</label>
+                <label><input type="checkbox" name="type" value="Randonnée" /> Randonnée</label>
+              </fieldset>
+
+              <fieldset class="filter-group">
+                <legend>État</legend>
+                <label><input type="checkbox" name="condition" value="Neuf" /> Neuf</label>
+                <label><input type="checkbox" name="condition" value="Comme neuf" /> Comme neuf</label>
+                <label><input type="checkbox" name="condition" value="Très bon état" /> Très bon état</label>
+                <label><input type="checkbox" name="condition" value="Bon état" /> Bon état</label>
+                <label><input type="checkbox" name="condition" value="État correct" /> État correct</label>
+              </fieldset>
+
+              <div class="filter-group">
+                <label for="maxPrice"><strong>Prix maximum</strong><output id="maxPriceOutput">CHF 150.–</output></label>
+                <input id="maxPrice" type="range" min="10" max="300" step="5" value="150" />
+              </div>
+
+              <label class="stock-filter"><input id="availableOnly" type="checkbox" /> Afficher uniquement les articles disponibles</label>
+              <button class="filter-reset" id="resetFilters" type="button">↻ Réinitialiser les filtres</button>
+            </aside>
+
+            <div class="catalogue-results">
+              <div class="results-toolbar">
+                <p><strong id="resultCount">0</strong> article(s)</p>
+                <label for="sortShoes">Trier par :
+                  <select id="sortShoes">
+                    <option value="recent">Plus récents</option>
+                    <option value="price-asc">Prix croissant</option>
+                    <option value="price-desc">Prix décroissant</option>
+                    <option value="size-asc">Pointure croissante</option>
+                  </select>
+                </label>
+              </div>
+              <div class="shoe-product-grid" id="shoeGrid"></div>
+              <p class="empty-state" id="shoeEmpty" hidden>Aucune paire ne correspond à ces filtres.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shoe-information">
+        <div class="page-shell shoe-information-grid">
+          <article><span aria-hidden="true">📷</span><h2>Photos honnêtes</h2><p>Chaque paire pourra avoir plusieurs vues : dessus, côtés, semelles, intérieur et défauts.</p></article>
+          <article><span aria-hidden="true">📏</span><h2>Pointure claire</h2><p>La pointure indiquée sur l'étiquette et, si nécessaire, une mesure intérieure seront précisées.</p></article>
+          <article><span aria-hidden="true">✓</span><h2>État détaillé</h2><p>Usure, semelles, crampons, lacets, boîte et défauts seront expliqués sans les cacher.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell footer-grid">
+        <div class="footer-brand">
+          <a class="brand brand-footer" href="index.html"><span class="brand-mark" aria-hidden="true">✦</span><span><strong>Le Bazar<br />des Mugis</strong><small>Des trésors pour tous</small></span></a>
+          <p>Des objets personnels prêts pour une nouvelle histoire, vendus depuis Orbe et envoyés partout en Suisse.</p>
+        </div>
+        <div><h3>Navigation</h3><a href="index.html">Accueil</a><a href="chaussures.html">Chaussures</a><a href="index.html#marches">Tous les marchés</a></div>
+        <div><h3>Réception</h3><a href="index.html">Retrait à Orbe</a><a href="index.html">Livraison locale</a><a href="index.html">Envoi en Suisse</a></div>
+        <div class="footer-quote"><p>« Chaque paire a déjà marché quelque part. À toi de poursuivre le voyage. »</p></div>
+      </div>
+      <div class="page-shell footer-bottom"><span>© <span id="currentYear"></span> Le Bazar des Mugis</span><span>Prototype chaussures V1</span></div>
+    </footer>
+
+    <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-labelledby="cartTitle" aria-hidden="true">
+      <div class="drawer-header"><div><p class="eyebrow">Ta sélection</p><h2 id="cartTitle">Le panier</h2></div><button class="icon-button" id="closeCart" type="button" aria-label="Fermer">×</button></div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer"><div class="cart-total"><span>Total avec livraison</span><strong id="cartTotal">CHF 0.00</strong></div><p>Le forfait provisoire de CHF 5.– est inclus.</p><button class="button button-full" id="checkoutButton" type="button">Envoyer la demande</button></div>
+    </aside>
+
+    <dialog class="product-dialog shoe-dialog" id="shoeDialog">
+      <button class="dialog-close icon-button" id="closeShoeDialog" type="button" aria-label="Fermer">×</button>
+      <div id="shoeDialogContent"></div>
+    </dialog>
+
+    <dialog class="checkout-dialog" id="checkoutDialog">
+      <button class="dialog-close icon-button" id="closeCheckoutDialog" type="button" aria-label="Fermer">×</button>
+      <div class="dialog-heading"><p class="eyebrow">Demande de commande</p><h2>Informations de réception</h2><p>Aucun paiement maintenant : tu recevras d'abord la confirmation de disponibilité.</p></div>
+      <form id="checkoutForm">
+        <div class="form-grid">
+          <label>Prénom et nom<input name="name" required autocomplete="name" /></label>
+          <label>E-mail<input name="email" type="email" required autocomplete="email" /></label>
+          <label>Adresse<input name="address" required autocomplete="street-address" /></label>
+          <label>NPA<input name="postalCode" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" required /></label>
+          <label>Localité<input name="city" required /></label>
+          <label>Téléphone (facultatif)<input name="phone" type="tel" /></label>
+        </div>
+        <fieldset><legend>Mode de réception</legend>
+          <label class="radio-card"><input type="radio" name="delivery" value="poste" required /><span><strong>Envoi par la Poste</strong><small>Partout en Suisse, environ 6 à 7 jours</small></span></label>
+          <label class="radio-card"><input type="radio" name="delivery" value="orbe" /><span><strong>Retrait à Orbe</strong><small>Adresse après confirmation</small></span></label>
+          <label class="radio-card"><input type="radio" name="delivery" value="local" /><span><strong>Livraison locale</strong><small>Environ 30 minutes autour d'Orbe</small></span></label>
+        </fieldset>
+        <label class="consent"><input type="checkbox" required /><span>J’ai compris que le paiement arrivera après confirmation.</span></label>
+        <button class="button button-full" type="submit">Confirmer la demande</button>
+      </form>
+    </dialog>
+
+    <section class="demo-panel" id="demoPanel" hidden aria-live="polite">
+      <div><strong>Simulation vendeur</strong><span id="demoOrderLabel"></span></div>
+      <button class="button button-small" id="confirmOrder" type="button">Confirmer la disponibilité</button>
+      <button class="button button-small button-accent" id="simulatePayment" type="button">Simuler le paiement</button>
+    </section>
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  </body>
+</html>

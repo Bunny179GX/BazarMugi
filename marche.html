@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Articles de seconde main du Bazar des Mugis, disponibles en Suisse." />
+  <title>Le marché — Le Bazar des Mugis</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="catalogue-data.js" defer></script>
+  <script src="catalogue-reel-2026.js" defer></script>
+  <script src="marche.js" defer></script>
+</head>
+<body class="market-page">
+  <a class="skip-link" href="#catalogueMarche">Aller aux articles</a>
+  <div class="prototype-banner"><span>Prototype du catalogue — photos et informations à compléter</span></div>
+  <header class="site-header">
+    <div class="header-inner page-shell">
+      <a class="brand" href="index.html"><span class="brand-mark">✦</span><span><strong>Le Bazar<br />des Mugis</strong><small>Des trésors pour tous</small></span></a>
+      <button class="mobile-menu-button icon-button" id="mobileMenuButton" type="button" aria-expanded="false" aria-controls="mainNav"><span class="sr-only">Ouvrir le menu</span><span>☰</span></button>
+      <nav class="main-nav" id="mainNav" aria-label="Navigation principale"><a href="index.html">Accueil</a><a class="active" href="#catalogueMarche" id="navMarket">Marché</a><a href="index.html#marches">Catégories</a><a href="index.html#a-propos">À propos</a><a href="mailto:bazarmugi@gmail.com">Contact</a></nav>
+      <div class="header-actions"><button class="icon-button" id="focusSearch" type="button" aria-label="Rechercher">⌕</button><button class="icon-button cart-button" id="cartButton" type="button" aria-label="Ouvrir le panier">🛒<span class="counter" id="cartCount" hidden>0</span></button></div>
+    </div>
+  </header>
+  <main>
+    <section class="category-hero market-hero" id="marketHero" aria-labelledby="marketTitle">
+      <div class="page-shell category-hero-inner">
+        <nav class="breadcrumbs" aria-label="Fil d’Ariane"><a href="index.html">Accueil</a><span>›</span><span id="breadcrumbLabel">Marché</span></nav>
+        <div class="category-hero-copy"><p class="eyebrow" id="marketEyebrow">Le marché</p><h1 id="marketTitle">Des trésors à découvrir</h1><p id="marketDescription"></p></div>
+        <div class="market-hero-art" aria-hidden="true"><span class="theme-orbit"></span><img id="marketHeroImage" alt="" /></div>
+      </div>
+    </section>
+    <nav class="market-tabs" aria-label="Les marchés du bazar"><div class="page-shell market-tabs-inner" id="marketTabs"></div></nav>
+    <section class="catalogue-section" id="catalogueMarche">
+      <div class="page-shell">
+        <div class="catalogue-intro"><div><p class="eyebrow">Étal préparé</p><h2 id="catalogueTitle">Les articles</h2></div><p class="demo-note"><strong>Présentation commune :</strong> chaque article indique son état, son prix, sa disponibilité et son mode de réception. Les vraies photos remplaceront les emplacements prévus.</p></div>
+        <button class="button filter-toggle" id="filterToggle" type="button" aria-expanded="false" aria-controls="marketFilters">Afficher les filtres</button>
+        <div class="catalogue-layout">
+          <aside class="filters-panel" id="marketFilters">
+            <div class="filters-title"><span>☷</span><h2>Filtres</h2></div>
+            <label class="filter-search">Rechercher<input id="marketSearch" type="search" placeholder="Nom, description…" /></label>
+            <fieldset class="filter-group"><legend>État</legend><label><input type="checkbox" name="condition" value="Comme neuf" /> Comme neuf</label><label><input type="checkbox" name="condition" value="Très bon état" /> Très bon état</label><label><input type="checkbox" name="condition" value="Bon état" /> Bon état</label><label><input type="checkbox" name="condition" value="État correct" /> État correct</label></fieldset>
+            <div class="filter-group"><label for="maxPrice"><strong>Prix maximum</strong><output id="maxPriceOutput">CHF 300.–</output></label><input id="maxPrice" type="range" min="5" max="500" step="5" value="300" /></div>
+            <label class="stock-filter"><input id="availableOnly" type="checkbox" /> Uniquement les articles disponibles</label>
+            <button class="filter-reset" id="resetFilters" type="button">↻ Réinitialiser</button>
+          </aside>
+          <div class="catalogue-results">
+            <div class="results-toolbar"><p><strong id="resultCount">0</strong> article(s)</p><label>Trier par : <select id="sortMarket"><option value="recent">Plus récents</option><option value="price-asc">Prix croissant</option><option value="price-desc">Prix décroissant</option></select></label></div>
+            <div class="shoe-product-grid" id="marketGrid"></div><p class="empty-state" id="marketEmpty" hidden>Aucun article ne correspond à ces filtres.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="shoe-information"><div class="page-shell shoe-information-grid" id="marketPromises"></div></section>
+  </main>
+  <footer class="site-footer"><div class="page-shell footer-grid"><div class="footer-brand"><a class="brand brand-footer" href="index.html"><span class="brand-mark">✦</span><span><strong>Le Bazar<br />des Mugis</strong><small>Des trésors pour tous</small></span></a><p>Des objets personnels prêts pour une nouvelle histoire, depuis Orbe et partout en Suisse.</p></div><div><h3>Navigation</h3><a href="index.html">Accueil</a><a href="index.html#marches">Tous les marchés</a></div><div><h3>Réception</h3><a href="index.html">Retrait à Orbe</a><a href="index.html">Livraison locale</a><a href="mailto:bazarmugi@gmail.com">bazarmugi@gmail.com</a></div><div class="footer-quote"><p id="marketQuote"></p></div></div><div class="page-shell footer-bottom"><span>© <span id="currentYear"></span> Le Bazar des Mugis</span><span>Prototype marché V1</span></div></footer>
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div><aside class="cart-drawer" id="cartDrawer" aria-hidden="true"><div class="drawer-header"><div><p class="eyebrow">Ta sélection</p><h2>Le panier</h2></div><button class="icon-button" id="closeCart" type="button">×</button></div><div class="cart-items" id="cartItems"></div><div class="cart-footer"><div class="cart-total"><span>Total avec livraison</span><strong id="cartTotal">CHF 0.00</strong></div><p>Le forfait provisoire de CHF 5.– est inclus.</p><a class="button button-full" href="index.html#trouvailles">Continuer la demande</a></div></aside>
+  <dialog class="product-dialog shoe-dialog" id="productDialog"><button class="dialog-close icon-button" id="closeProductDialog" type="button">×</button><div id="productDialogContent"></div></dialog>
+  <div class="toast" id="toast" hidden></div>
+</body>
+</html>
