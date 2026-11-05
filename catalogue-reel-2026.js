@@ -5,12 +5,12 @@
   const catalogue = window.BazarCatalogue;
   if (!catalogue) return;
 
-  const base = "assets/images-produits/catalogue-2026";
-  const real = (folder, number) => `${base}/reelles/${folder}-img_${String(number).padStart(4, "0")}.jpg`;
-  const gallery = (folder, start, end) => Array.from({ length: end - start + 1 }, (_, i) => real(folder, start + i));
+  /* Les originaux RAW restent hors du dépôt public. */
+  const real = () => "";
+  const gallery = () => [];
   const optimizedName = name => name.replace(/\.png$/i, ".jpg");
-  const hero = name => `${base}/hero/${optimizedName(name)}`;
-  const flat = name => `${base}/a-plat/${optimizedName(name)}`;
+  const hero = name => `hero/${optimizedName(name)}`;
+  const flat = name => `a-plat/${optimizedName(name)}`;
   const pending = "À confirmer";
   const delivery = "CHF 5.– par la Poste ou retrait à Orbe";
 
